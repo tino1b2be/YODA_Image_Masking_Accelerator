@@ -34,6 +34,7 @@
     </transform>
     <transform xil_pn:end_ts="1497989402" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1497989402">
       <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
     </transform>
     <transform xil_pn:end_ts="1497989402" xil_pn:in_ck="4152376521930375467" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1497989402">
       <status xil_pn:value="SuccessfullyRun"/>
@@ -68,7 +69,7 @@
     </transform>
     <transform xil_pn:end_ts="1497989405" xil_pn:in_ck="4152376521930375467" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-2202936299339359363" xil_pn:start_ts="1497989404">
       <status xil_pn:value="FailedRun"/>
-      <status xil_pn:value="NotReadyToRun"/>
+      <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="InputRemoved"/>
