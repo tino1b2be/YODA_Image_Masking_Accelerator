@@ -36,5 +36,4 @@ module imm
     vga_buffer[(i_p*`ROW_LEN) + j_p] = pixel_result;
   end
   
-  
 endmodule

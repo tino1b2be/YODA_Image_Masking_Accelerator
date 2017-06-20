@@ -10,6 +10,6 @@ Analyzing Verilog file "/opt/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into li
 Starting static elaboration
 Completed static elaboration
 Fuse Memory Usage: 94672 KB
-Fuse CPU Usage: 850 ms
+Fuse CPU Usage: 780 ms
 Compiling module imm
 ERROR:Simulator:776 - Signal SIGSEGV received
