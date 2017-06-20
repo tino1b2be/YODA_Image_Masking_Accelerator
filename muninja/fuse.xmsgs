@@ -5,8 +5,13 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="error" file="Simulator" num="702" delta="unknown" >Can not find design unit <arg fmt="%s" index="1">Module</arg> in library <arg fmt="%s" index="2">work</arg> located at <arg fmt="%s" index="3">isim/work</arg> 
+<msg type="warning" file="HDLCompiler" num="1591" delta="unknown" >"mask.v" Line 12: Root scope declaration is not allowed in verilog 95/2K mode
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1591" delta="unknown" >"vga_util.v" Line 8: Root scope declaration is not allowed in verilog 95/2K mode
+</msg>
+
+<msg type="error" file="Simulator" num="776" delta="unknown" >Signal SIGSEGV received
 </msg>
 
 </messages>
-

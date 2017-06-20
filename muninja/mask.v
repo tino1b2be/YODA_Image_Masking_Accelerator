@@ -9,6 +9,6 @@
 `define MASK_COL_LEN 5
 
 // 5 by 5 mask
-reg [11:0] vga_buffer[24:0] = `{12'h_AAA, 12'h_AAA, 12'h_AAA, 12'h_AAA, 12'h_AAA, 12'h_AAA, 12'h_AAA, 12'h_AAA, 12'h_AAA, 12'h_AAA, 12'h_AAA, 12'h_AAA, 12'h_AAA, 12'h_AAA, 12'h_AAA, 12'h_AAA, 12'h_AAA, 12'h_AAA, 12'h_AAA, 12'h_AAA, 12'h_AAA, 12'h_AAA, 12'h_AAA, 12'h_AAA, 12'h_AAA};
+reg [11:0] mask[24:0] = {12'h_AAA, 12'h_AAA, 12'h_AAA, 12'h_AAA, 12'h_AAA, 12'h_AAA, 12'h_AAA, 12'h_AAA, 12'h_AAA, 12'h_AAA, 12'h_AAA, 12'h_AAA, 12'h_AAA, 12'h_AAA, 12'h_AAA, 12'h_AAA, 12'h_AAA, 12'h_AAA, 12'h_AAA, 12'h_AAA, 12'h_AAA, 12'h_AAA, 12'h_AAA, 12'h_AAA, 12'h_AAA};
 
 `endif // mask_

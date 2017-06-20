@@ -10,9 +10,4 @@
 `define ROW_LEN 6			// width of an image
 `define COL_LEN 6			// width of an image
 
-reg [11:0] image [35:0];
-
-
-//= {12'h_FFF, 12'h_FFF, 12'h_FFF, 12'h_FFF, 12'h_FFF, 12'h_FFF, 12'h_FFF, 12'h_FFF, 12'h_FFF, 12'h_FFF, 12'h_FFF, 12'h_FFF, 12'h_FFF, 12'h_FFF, 12'h_FFF, 12'h_FFF, 12'h_FFF, 12'h_FFF, 12'h_FFF, 12'h_FFF, 12'h_FFF, 12'h_FFF, 12'h_FFF, 12'h_FFF, 12'h_FFF, 12'h_FFF, 12'h_FFF, 12'h_FFF, 12'h_FFF, 12'h_FFF, 12'h_FFF, 12'h_FFF, 12'h_FFF, 12'h_FFF, 12'h_FFF, 12'h_FFF};
-
 `endif //utils_

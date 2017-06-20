@@ -1,0 +1,8 @@
+xst -intstyle ise -ifn "/home/bluelabuser/muninja/muninja/imm.xst" -ofn "/home/bluelabuser/muninja/muninja/imm.syr" 
+xst -intstyle ise -ifn "/home/bluelabuser/muninja/muninja/imm.xst" -ofn "/home/bluelabuser/muninja/muninja/imm.syr" 
+xst -intstyle ise -ifn "/home/bluelabuser/muninja/muninja/imm.xst" -ofn "/home/bluelabuser/muninja/muninja/imm.syr" 
+xst -intstyle ise -ifn "/home/bluelabuser/muninja/muninja/imm.xst" -ofn "/home/bluelabuser/muninja/muninja/imm.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc7a100t-csg324-2L imm.ngc imm.ngd  
+map -intstyle ise -p xc7a100t-csg324-2L -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o imm_map.ncd imm.ngd imm.pcf 
+par -w -intstyle ise -ol high -mt off imm_map.ncd imm.ncd imm.pcf 
+trce -intstyle ise -v 3 -s 2L -n 3 -fastpaths -xml imm.twx imm.ncd -o imm.twr imm.pcf 

@@ -1,7 +1,8 @@
 // Image Masking Module
 
-`include "mask.vh"
-`include "vga_util.vh"
+`include "mask.v"
+`include "vga_util.v"
+`include "utils.v"
 
 module imm 
   (
@@ -11,17 +12,19 @@ module imm
     input	[8:0]	i_offset,
     input	[7:0]	j_offset,
     input			Tx,
-    output reg	[11:0]	pixel_result;
+    output reg	[11:0]	pixel_result
   );
   
+  reg [16:0] mask_index;
+  
   always @(posedge Tx) begin
+    mask_index = (i_p - i_offset) * `ROW_LEN + (j_p - j_offset);
     if (i_p > i_offset
         && i_p < (i_offset + `ROW_LEN)
         && j_p > j_offset
         && j_p < (j_offset + `COL_LEN)
        ) begin
-      wire [16:0] mask_index = (i_p - i_offset) * `ROW_LEN + (j_p - j_offset);
-      
+            
       pixel_result = pixel ^ mask[mask_index];
     
     end 		// end if inside mask
