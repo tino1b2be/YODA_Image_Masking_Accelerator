@@ -1,0 +1,6 @@
+Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -lib secureip -o /home/bluelabuser/muninja/muninja/Module_isim_beh.exe -prj /home/bluelabuser/muninja/muninja/Module_beh.prj Module 
+ISim P.20131013 (signature 0xfbc00daa)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+ERROR:Simulator:702 - Can not find design unit Module in library work located at isim/work 

@@ -14,8 +14,6 @@ module imm
     output reg	[11:0]	pixel_result;
   );
   
-  
-  
   always @(posedge Tx) begin
     if (i_p > i_offset
         && i_p < (i_offset + `ROW_LEN)

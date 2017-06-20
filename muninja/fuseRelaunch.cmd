@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "secureip" -o "/home/bluelabuser/muninja/muninja/Module_isim_beh.exe" -prj "/home/bluelabuser/muninja/muninja/Module_beh.prj" "Module" 
