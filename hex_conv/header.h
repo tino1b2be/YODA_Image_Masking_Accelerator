@@ -9,5 +9,4 @@
 
 std::string int_to_hex(JSAMPLE, JSAMPLE, JSAMPLE);
 
-
 #endif

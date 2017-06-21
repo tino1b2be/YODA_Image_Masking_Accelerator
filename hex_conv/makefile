@@ -29,4 +29,4 @@ Prac2:
 	$(CC) -o bin/main obj/main.o obj/JPEG.o obj/Timer.o $(LDLIBS)
 
 run:
-	bin/main "test.jpg"
+	bin/main "test.jpg" "out_1"
