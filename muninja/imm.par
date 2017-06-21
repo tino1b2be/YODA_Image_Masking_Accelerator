@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-pc01.bluelab.uct.ac.za::  Tue Jun 20 23:41:59 2017
+pc01.bluelab.uct.ac.za::  Wed Jun 21 01:34:46 2017
 
 par -w -intstyle ise -ol high -mt off imm_map.ncd imm.ncd imm.pcf 
 

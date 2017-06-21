@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "/home/bluelabuser/muninja/muninja/imm_isim_beh.exe" -prj "/home/bluelabuser/muninja/muninja/imm_beh.prj" "work.imm" "work.glbl" 
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "/home/bluelabuser/muninja/muninja/imm_tb_isim_beh.exe" -prj "/home/bluelabuser/muninja/muninja/imm_tb_beh.prj" "work.imm_tb" "work.glbl" 

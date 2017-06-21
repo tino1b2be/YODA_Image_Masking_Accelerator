@@ -1,4 +1,4 @@
-Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o /home/bluelabuser/muninja/muninja/imm_isim_beh.exe -prj /home/bluelabuser/muninja/muninja/imm_beh.prj work.imm work.glbl 
+Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o /home/bluelabuser/muninja/muninja/imm_tb_isim_beh.exe -prj /home/bluelabuser/muninja/muninja/imm_tb_beh.prj work.imm_tb work.glbl 
 ISim P.20131013 (signature 0xfbc00daa)
 Number of CPUs detected in this system: 4
 Turning on mult-threading, number of parallel sub-compilation jobs: 8 
@@ -6,10 +6,11 @@ Determining compilation order of HDL files
 Analyzing Verilog file "/home/bluelabuser/muninja/muninja/imm.v" into library work
 WARNING:HDLCompiler:1591 - "mask.v" Line 12: Root scope declaration is not allowed in verilog 95/2K mode
 WARNING:HDLCompiler:1591 - "vga_util.v" Line 8: Root scope declaration is not allowed in verilog 95/2K mode
+Analyzing Verilog file "/home/bluelabuser/muninja/muninja/tb_imm.v" into library work
 Analyzing Verilog file "/opt/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
 Starting static elaboration
 Completed static elaboration
-Fuse Memory Usage: 94672 KB
-Fuse CPU Usage: 780 ms
+Fuse Memory Usage: 94676 KB
+Fuse CPU Usage: 900 ms
 Compiling module imm
 ERROR:Simulator:776 - Signal SIGSEGV received
