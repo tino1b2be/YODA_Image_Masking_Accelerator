@@ -7,7 +7,7 @@
 
 // Start of include contents
 
-`define ROW_LEN 6			// width of an image
-`define COL_LEN 6			// width of an image
+`define ROW_LEN 5			// width of an image
+`define COL_LEN 5			// width of an image
 
 `endif //utils_

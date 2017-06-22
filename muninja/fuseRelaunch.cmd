@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "/home/bluelabuser/muninja/muninja/imm_tb_isim_beh.exe" -prj "/home/bluelabuser/muninja/muninja/imm_tb_beh.prj" "work.imm_tb" "work.glbl" 
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "/home/tino1b2be/Documents/YODA_Image_Masking_Accelerator/muninja/imm_tb_isim_beh.exe" -prj "/home/tino1b2be/Documents/YODA_Image_Masking_Accelerator/muninja/imm_tb_beh.prj" "work.imm_tb" "work.glbl" 

@@ -22,6 +22,8 @@ module imm_tb;
 	);
 	
 	initial begin
+		$monitor("pixel=%d, result=%d, Tx=%d",pixel, pixel_result, Tx);
+		
 		pixel		= 12'h_FFF;
 		i_p		= 0;
 		j_p		= 0;
@@ -33,7 +35,7 @@ module imm_tb;
 		
 		#50 Tx = 1;
 		
-		$finish;
+		#100 $finish;
 	end
 	
 endmodule

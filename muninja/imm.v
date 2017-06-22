@@ -1,7 +1,7 @@
 // Image Masking Module
 
-`include "mask.v"
-`include "vga_util.v"
+//`include "mask.v"
+//`include "vga_util.v"
 `include "utils.v"
 
 module imm 
@@ -16,6 +16,11 @@ module imm
   );
   
   reg [16:0] mask_index;
+  reg [11:0] vga_buffer[24:0];
+  reg [11:0] mask[24:0];
+  
+  assign vga_buffer	= {12'h_96d, 12'h_96d, 12'h_96d, 12'h_96d, 12'h_96d, 12'h_96d, 12'h_96d, 12'h_96d, 12'h_96d, 12'h_96d, 12'h_96d, 12'h_95d, 12'h_85d, 12'h_95d, 12'h_96d, 12'h_96d, 12'h_95d, 12'h_85d, 12'h_95d, 12'h_96d, 12'h_96d, 12'h_95d, 12'h_85d, 12'h_95d, 12'h_96d};
+  assign mask	 		= {12'h_AAA, 12'h_AAA, 12'h_AAA, 12'h_AAA, 12'h_AAA, 12'h_AAA, 12'h_AAA, 12'h_AAA, 12'h_AAA, 12'h_AAA, 12'h_AAA, 12'h_AAA, 12'h_AAA, 12'h_AAA, 12'h_AAA, 12'h_AAA, 12'h_AAA, 12'h_AAA, 12'h_AAA, 12'h_AAA, 12'h_AAA, 12'h_AAA, 12'h_AAA, 12'h_AAA, 12'h_AAA};
   
   always @(posedge Tx) begin
     mask_index = (i_p - i_offset) * `ROW_LEN + (j_p - j_offset);

@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "/home/tino1b2be/Documents/YODA_Image_Masking_Accelerator/YODA_IMA2/imm_tb_isim_beh.exe" -prj "/home/tino1b2be/Documents/YODA_Image_Masking_Accelerator/YODA_IMA2/imm_tb_beh.prj" "work.imm_tb" "work.glbl" 

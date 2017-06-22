@@ -7,6 +7,6 @@
 
 // Start of include contents
 
-reg [11:0] image [35:0] = {12'h_FFF, 12'h_FFF, 12'h_FFF, 12'h_FFF, 12'h_FFF, 12'h_FFF, 12'h_FFF, 12'h_FFF, 12'h_FFF, 12'h_FFF, 12'h_FFF, 12'h_FFF, 12'h_FFF, 12'h_FFF, 12'h_FFF, 12'h_FFF, 12'h_FFF, 12'h_FFF, 12'h_FFF, 12'h_FFF, 12'h_FFF, 12'h_FFF, 12'h_FFF, 12'h_FFF, 12'h_FFF, 12'h_FFF, 12'h_FFF, 12'h_FFF, 12'h_FFF, 12'h_FFF, 12'h_FFF, 12'h_FFF, 12'h_FFF, 12'h_FFF, 12'h_FFF, 12'h_FFF};
+//reg [11:0] vga_buffer[24:0] = {12'h_FFF, 12'h_FFF, 12'h_FFF, 12'h_FFF, 12'h_FFF, 12'h_FFF, 12'h_FFF, 12'h_FFF, 12'h_FFF, 12'h_FFF, 12'h_FFF, 12'h_FFF, 12'h_FFF, 12'h_FFF, 12'h_FFF, 12'h_FFF, 12'h_FFF, 12'h_FFF, 12'h_FFF, 12'h_FFF, 12'h_FFF, 12'h_FFF, 12'h_FFF, 12'h_FFF, 12'h_FFF, 12'h_FFF, 12'h_FFF, 12'h_FFF, 12'h_FFF, 12'h_FFF, 12'h_FFF, 12'h_FFF, 12'h_FFF, 12'h_FFF, 12'h_FFF, 12'h_FFF};
 
 `endif //image_header_

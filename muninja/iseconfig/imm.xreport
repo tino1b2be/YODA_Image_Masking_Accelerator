@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2017-06-20T21:50:44</DateModified>
+  <DateModified>2017-06-21T20:16:50</DateModified>
   <ModuleName>imm</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
-  <SavedFilePath>/home/bluelabuser/muninja/muninja/iseconfig/imm.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>/home/bluelabuser/muninja/muninja</ImplementationReportsDirectory>
+  <SavedFilePath>/home/tino1b2be/Documents/YODA_Image_Masking_Accelerator/muninja/iseconfig/imm.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>/home/tino1b2be/Documents/YODA_Image_Masking_Accelerator/muninja/</ImplementationReportsDirectory>
   <DateInitialized>2017-06-20T21:50:44</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

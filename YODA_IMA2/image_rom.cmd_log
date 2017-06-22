@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "/home/tino1b2be/Documents/YODA_Image_Masking_Accelerator/YODA_IMA2/image_rom.xst" -ofn "/home/tino1b2be/Documents/YODA_Image_Masking_Accelerator/YODA_IMA2/image_rom.syr" 
