@@ -1,27 +1,5 @@
 `timescale 1ns / 1ps
 
-////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer:
-//
-// Create Date:   15:41:24 06/22/2017
-// Design Name:   vga_buffer_ram
-// Module Name:   /home/tino1b2be/Documents/YODA_Image_Masking_Accelerator/YODA_IMA2/vga_buffer_ram_tb.v
-// Project Name:  YODA_IMA2
-// Target Device:  
-// Tool versions:  
-// Description: 
-//
-// Verilog Test Fixture created by ISE for module: vga_buffer_ram
-//
-// Dependencies:
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-////////////////////////////////////////////////////////////////////////////////
-
 module vga_buffer_ram_tb;
 
 	// Inputs
@@ -47,8 +25,11 @@ module vga_buffer_ram_tb;
 	);
 
 	initial begin
+		$monitor("input = %d, in_row = $d, in_col = %d, output = %d, out_row = %d, out_col = %d",
+					pixel_result, pixel_row, pixel_col, pixel_out, row_read, col_read);
+		
 		// Initialize Inputs
-		pixel_result = 0;
+		pixel_result = 12'h_AAA;
 		pixel_row = 0;
 		pixel_col = 0;
 		clk = 0;
@@ -57,8 +38,35 @@ module vga_buffer_ram_tb;
 
 		// Wait 100 ns for global reset to finish
 		#100;
-        
-		// Add stimulus here
+      clk = 1; // pixel_out is supposed to be 12'h_AAA
+		
+		#100 clk = 0;
+		#10;
+		pixel_result = 12'h_BBB;
+		pixel_row = 5;
+		pixel_col = 3;
+		row_read = 0;
+		col_read = 0;
+		
+		#90 clk = 1; // pixel_out is supposed to be 12'h_AAA
+		
+		#100 clk = 0;
+		#10;
+		pixel_result = 12'h_CCC;
+		pixel_row = 2;
+		pixel_col = 7;
+		row_read = 5;
+		col_read = 3;	
+
+		#90 clk = 1; // pixel_out is supposed to read 12'h_BBB
+		
+		#100 clk = 0;
+		#10;
+		row_read = 2;
+		col_read = 7;
+		
+		#90 clk = 1; // pixel_out is supposed to read 12'h_CCC
+		#100 $finish;
 
 	end
       

@@ -1,19 +1,22 @@
-Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o C:/Users/rbcsj/Desktop/Yoda_git/YODA_Image_Masking_Accelerator/YODA_IMA2/mask_rom_tb_isim_beh.exe -prj C:/Users/rbcsj/Desktop/Yoda_git/YODA_Image_Masking_Accelerator/YODA_IMA2/mask_rom_tb_beh.prj work.mask_rom_tb work.glbl 
-ISim P.20131013 (signature 0x7708f090)
-Number of CPUs detected in this system: 4
-Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -relaunch -intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "/home/tino1b2be/Documents/YODA_Image_Masking_Accelerator/YODA_IMA2/vga_buffer_ram_tb_isim_beh.exe" -prj "/home/tino1b2be/Documents/YODA_Image_Masking_Accelerator/YODA_IMA2/vga_buffer_ram_tb_beh.prj" "vga_buffer_ram_tb" "work.glbl" 
+ISim P.20131013 (signature 0xfbc00daa)
+Number of CPUs detected in this system: 2
+Turning on mult-threading, number of parallel sub-compilation jobs: 4 
 Determining compilation order of HDL files
-Analyzing Verilog file "C:/Users/rbcsj/Desktop/Yoda_git/YODA_Image_Masking_Accelerator/YODA_IMA2/mask_12_bit_rom.v" into library work
-Analyzing Verilog file "C:/Users/rbcsj/Desktop/Yoda_git/YODA_Image_Masking_Accelerator/YODA_IMA2/mask_rom_tb.v" into library work
-Analyzing Verilog file "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Analyzing Verilog file "/home/tino1b2be/Documents/YODA_Image_Masking_Accelerator/YODA_IMA2/vga_buffer_ram.v" into library work
+Analyzing Verilog file "/home/tino1b2be/Documents/YODA_Image_Masking_Accelerator/YODA_IMA2/vga_buffer_ram_tb.v" into library work
+Analyzing Verilog file "/opt/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
 Starting static elaboration
 Completed static elaboration
-Compiling module mask_rom
-Compiling module mask_rom_tb
+Fuse Memory Usage: 94652 KB
+Fuse CPU Usage: 1640 ms
+Compiling module vga_buffer_ram
+Compiling module vga_buffer_ram_tb
 Compiling module glbl
 Time Resolution for simulation is 1ps.
 Waiting for 1 sub-compilation(s) to finish...
 Compiled 3 Verilog Units
-Built simulation executable C:/Users/rbcsj/Desktop/Yoda_git/YODA_Image_Masking_Accelerator/YODA_IMA2/mask_rom_tb_isim_beh.exe
-Fuse Memory Usage: 102660 KB
-Fuse CPU Usage: 12858 ms
+Built simulation executable /home/tino1b2be/Documents/YODA_Image_Masking_Accelerator/YODA_IMA2/vga_buffer_ram_tb_isim_beh.exe
+Fuse Memory Usage: 261624 KB
+Fuse CPU Usage: 1640 ms
+GCC CPU Usage: 130 ms
