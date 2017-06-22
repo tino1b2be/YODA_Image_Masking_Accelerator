@@ -48,6 +48,9 @@
     <transform xil_pn:end_ts="1498139835" xil_pn:in_ck="-1425532692801855715" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1498139835">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="InputAdded"/>
+      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="image_12_bit_rom.v"/>
       <outfile xil_pn:name="image_rom_tb.v"/>
       <outfile xil_pn:name="imm.v"/>
@@ -72,6 +75,7 @@
     <transform xil_pn:end_ts="1498139835" xil_pn:in_ck="-1425532692801855715" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1498139835">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="image_12_bit_rom.v"/>
       <outfile xil_pn:name="image_rom_tb.v"/>
       <outfile xil_pn:name="imm.v"/>
@@ -84,6 +88,16 @@
     <transform xil_pn:end_ts="1498139876" xil_pn:in_ck="-1425532692801855715" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="4073246134550739929" xil_pn:start_ts="1498139835">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      <status xil_pn:value="OutOfDateForProperties"/>
+=======
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+>>>>>>> ee02c47f15dabbfd517a5a2cc82b201a0c19dc9a
+>>>>>>> fc447d2ca01ba00c6a3cc3c47db43fdab7f998e3
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="fuse.log"/>
@@ -96,6 +110,17 @@
     <transform xil_pn:end_ts="1498139978" xil_pn:in_ck="-2926934310368780220" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-5606586695969017796" xil_pn:start_ts="1498139978">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+<<<<<<< HEAD
+=======
+      <status xil_pn:value="OutOfDateForProperties"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+<<<<<<< HEAD
+=======
+      <outfile xil_pn:name="imm_tb_isim_beh.wdb"/>
+>>>>>>> ee02c47f15dabbfd517a5a2cc82b201a0c19dc9a
+>>>>>>> fc447d2ca01ba00c6a3cc3c47db43fdab7f998e3
       <outfile xil_pn:name="isim.cmd"/>
       <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="mask_rom_tb_isim_beh.wdb"/>

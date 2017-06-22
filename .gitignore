@@ -21,3 +21,6 @@ YODA_IMA2/xst/*
 *.xmsgs
 *.cmd
 *.log
+YODA_IMA2/_xmsgs/pn_parser.xmsgs
+YODA_IMA2/YODA_IMA2.gise
+YODA_IMA2/YODA_IMA2.xise
