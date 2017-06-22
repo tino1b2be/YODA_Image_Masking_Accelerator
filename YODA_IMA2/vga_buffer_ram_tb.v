@@ -6,7 +6,7 @@ module vga_buffer_ram_tb;
 	reg [11:0] pixel_result;
 	reg [7:0] pixel_row;
 	reg [8:0] pixel_col;
-	reg clk;
+	//reg clk;
 	reg [7:0] row_read;
 	reg [8:0] col_read;
 
@@ -18,7 +18,7 @@ module vga_buffer_ram_tb;
 		.pixel_result(pixel_result), 
 		.pixel_row(pixel_row), 
 		.pixel_col(pixel_col), 
-		.clk(clk), 
+		//.clk(clk), 
 		.row_read(row_read), 
 		.col_read(col_read), 
 		.pixel_out(pixel_out)
@@ -32,43 +32,32 @@ module vga_buffer_ram_tb;
 		pixel_result = 12'h_AAA;
 		pixel_row = 0;
 		pixel_col = 0;
-		clk = 0;
+		//clk = 0;
 		row_read = 0;
 		col_read = 0;
 
-		// Wait 100 ns for global reset to finish
+
 		#100;
-      clk = 1; // pixel_out is supposed to be 12'h_AAA
-		
-		#100 clk = 0;
-		#10;
 		pixel_result = 12'h_BBB;
 		pixel_row = 5;
 		pixel_col = 3;
 		row_read = 0;
 		col_read = 0;
-		
-		#90 clk = 1; // pixel_out is supposed to be 12'h_AAA
-		
-		#100 clk = 0;
-		#10;
+
+		#100;
 		pixel_result = 12'h_CCC;
 		pixel_row = 2;
 		pixel_col = 7;
 		row_read = 5;
 		col_read = 3;	
 
-		#90 clk = 1; // pixel_out is supposed to read 12'h_BBB
-		
-		#100 clk = 0;
-		#10;
+		#100;
 		row_read = 2;
 		col_read = 7;
 		
-		#90 clk = 1; // pixel_out is supposed to read 12'h_CCC
+		//#90 clk = 1; // pixel_out is supposed to read 12'h_CCC
 		#100 $finish;
 
 	end
       
 endmodule
-
