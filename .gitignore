@@ -16,3 +16,4 @@ YODA_IMA2/xst/*
 *.wdb
 *.exe
 
+*.gise
