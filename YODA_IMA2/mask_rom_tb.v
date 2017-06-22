@@ -17,7 +17,7 @@
 		);
 
 		initial begin
-			$monitor("clock = %d, data = %d, row = %d, col = %d", clk, color_data, row, col);
+			$monitor("data = %d, row = %d, col = %d", color_data, row, col);
 			// Initialize Inputs
 			row = 0;
 			col = 0;

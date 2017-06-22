@@ -1,4 +1,0 @@
-verilog work "mask_12_bit_rom.v"
-verilog work "imm.v"
-verilog work "imm_tb.v"
-verilog work "/opt/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

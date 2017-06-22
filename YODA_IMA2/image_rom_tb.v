@@ -12,7 +12,6 @@ module image_rom_tb;
 
 	// Instantiate the Unit Under Test (UUT)
 	image_rom uut (
-		.clk(clk), 
 		.row(row), 
 		.col(col), 
 		.color_data(color_data)
