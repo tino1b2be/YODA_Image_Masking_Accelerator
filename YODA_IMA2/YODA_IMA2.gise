@@ -41,11 +41,11 @@
   </files>
 
   <transforms xmlns="http://www.xilinx.com/XMLSchema">
-    <transform xil_pn:end_ts="1498138872" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1498138872">
+    <transform xil_pn:end_ts="1498139835" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1498139835">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1498138872" xil_pn:in_ck="-1425532692801855715" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1498138872">
+    <transform xil_pn:end_ts="1498139835" xil_pn:in_ck="-1425532692801855715" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1498139835">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="image_12_bit_rom.v"/>
@@ -57,19 +57,19 @@
       <outfile xil_pn:name="transfer_interface.v"/>
       <outfile xil_pn:name="utils.v"/>
     </transform>
-    <transform xil_pn:end_ts="1498138872" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-3263686597058089275" xil_pn:start_ts="1498138872">
+    <transform xil_pn:end_ts="1498139835" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-3263686597058089275" xil_pn:start_ts="1498139835">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1498138872" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-8276030834857932701" xil_pn:start_ts="1498138872">
+    <transform xil_pn:end_ts="1498139835" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-8276030834857932701" xil_pn:start_ts="1498139835">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1498138872" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="1738137239507178976" xil_pn:start_ts="1498138872">
+    <transform xil_pn:end_ts="1498139835" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="1738137239507178976" xil_pn:start_ts="1498139835">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1498138873" xil_pn:in_ck="-1425532692801855715" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1498138872">
+    <transform xil_pn:end_ts="1498139835" xil_pn:in_ck="-1425532692801855715" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1498139835">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="image_12_bit_rom.v"/>
@@ -81,10 +81,9 @@
       <outfile xil_pn:name="transfer_interface.v"/>
       <outfile xil_pn:name="utils.v"/>
     </transform>
-    <transform xil_pn:end_ts="1498138913" xil_pn:in_ck="-1425532692801855715" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="4073246134550739929" xil_pn:start_ts="1498138873">
+    <transform xil_pn:end_ts="1498139876" xil_pn:in_ck="-1425532692801855715" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="4073246134550739929" xil_pn:start_ts="1498139835">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForProperties"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="fuse.log"/>
@@ -94,13 +93,9 @@
       <outfile xil_pn:name="mask_rom_tb_isim_beh.exe"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1498138913" xil_pn:in_ck="-2926934310368780220" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-5606586695969017796" xil_pn:start_ts="1498138913">
+    <transform xil_pn:end_ts="1498139978" xil_pn:in_ck="-2926934310368780220" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-5606586695969017796" xil_pn:start_ts="1498139978">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForProperties"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="isim.cmd"/>
       <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="mask_rom_tb_isim_beh.wdb"/>
