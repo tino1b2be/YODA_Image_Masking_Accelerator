@@ -1,105 +1,57 @@
 `timescale 1ns / 1ps
+`include "utils.v"
 
-module vga_controller(clk,vga_vs,vga_hs,vga_r,vga_g,vga_b,r,g,b,vFree,hFree);
+module vga_controller
+	(
+	input	clk,
+	input			[11:0]	ram_pixel,
 
-	input  clk;
-	input [3:0] r,g,b;
-	output  vga_vs,vga_hs,hFree,vFree;
-	output reg [3:0] vga_r,vga_g,vga_b;
-	reg [3:0] free;
-	wire [9:0] hc,vc;
+	output	vga_vs,
+	output	vga_hs,
+	output	hFree,
+	output	vFree,	
+	output reg	[3:0]		vga_r,
+	output reg	[3:0]		vga_g,
+	output reg	[3:0]		vga_b,
+	output reg	[7:0] 	row_read,
+	output reg 	[8:0] 	col_read
+	);
 	
 	// video structure constants
+	
 	parameter hpixels = 800;// horizontal pixels per line
 	parameter vlines = 521; // vertical lines per frame
 	parameter hpulse = 96; 	// hsync pulse length
 	parameter vpulse = 2; 	// vsync pulse length
-	//changed from hbp=144 to below to accomodate screen
-	parameter hbp = 50; 	// end of horizontal back porch
+									// +++ changed from hbp=144 to below to accomodate screen
+	parameter hbp = 50; 		// end of horizontal back porch
 	parameter hfp = 784; 	// beginning of horizontal front porch
-	//changed from vbp=31 to below to accomodate screen
+									// +++ changed from vbp=31 to below to accomodate screen
 	parameter vbp = 15; 		// end of vertical back porch
 	parameter vfp = 511; 	// beginning of vertical front porch
-	// active horizontal video is therefore: 784 - 144 = 640
-	// active vertical video is therefore: 511 - 31 = 480
+									// active horizontal video is therefore: 784 - 144 = 640
+									// active vertical video is therefore: 511 - 31 = 480
+	
+	// wires to access pixels on the screen
+	wire [9:0] hc,vc;
 	
 	always@(*)begin
-		// reset condition
-//		if (clr == 1)
-//		begin
-//			hc <= 0;
-//			vc <= 0;
-//		end
-//		
-			// first check if we're within vertical active video range
-			if (vc >= vbp && vc < vfp)
-			begin
-				// now display different colors every 80 pixels
-				// while we're within the active horizontal range
-				// -----------------
-				// display white bar
-				if (hc >= hbp && hc < (hbp+80))
-				begin
-					vga_r = 4'b1111;
-					vga_g = 4'b1111;
-					vga_b = 4'b1111;
-				end
-				// display yellow bar
-				else if (hc >= (hbp+80) && hc < (hbp+160))
-				begin
-					vga_r = 4'b1111;
-					vga_g = 4'b1111;
-					vga_b = 4'b0000;
-				end
-				// display cyan bar
-				else if (hc >= (hbp+160) && hc < (hbp+240))
-				begin
-					vga_r = 4'b0000;
-					vga_g = 4'b1111;
-					vga_b = 4'b1111;
-				end
-				// display green bar
-				else if (hc >= (hbp+240) && hc < (hbp+320))
-				begin
-					vga_r = 4'b0000;
-					vga_g = 4'b1111;
-					vga_b = 4'b0000;
-				end
-				// display magenta bar
-				else if (hc >= (hbp+320) && hc < (hbp+400))
-				begin
-					vga_r = 4'b1111;
-					vga_g = 4'b0000;
-					vga_b = 4'b1111;
-				end
-				// display red bar
-				else if (hc >= (hbp+400) && hc < (hbp+480))
-				begin
-					vga_r = 4'b1111;
-					vga_g = 4'b0000;
-					vga_b = 4'b0000;
-				end
-				// display blue bar
-				else if (hc >= (hbp+480) && hc < (hbp+560))
-				begin
-					vga_r = 4'b0000;
-					vga_g = 4'b0000;
-					vga_b = 4'b1111;
-				end
-				// display black bar
-				else if (hc >= (hbp+560) && hc < (hbp+640))
-				begin
-					vga_r = 4'b0000;
-					vga_g = 4'b0000;
-					vga_b = 4'b0000;
-				end
-				// we're outside active horizontal range so display black
-				else
-				begin
-					vga_r = 0;
-					vga_g = 0;
-					vga_b = 0;
-				end
+		
+		// first check if we are inside the 320x240 area for the image
+			if (vc >= vbp
+				&& vc < (vfp + `IMAGE_HEIGHT)
+				&& hc >= hbp
+				&& hc < (hfp + `IMAGE_WIDTH)
+				) begin
+			
+				// set the row and column addresses for the VGA_RAM_BUFFER
+				row_read = vc - vbp;
+				col_read = hc - hbp;
+				
+				vga_r = ram_pixel[11:8];
+				vga_g = ram_pixel[7:4];
+				vga_b = ram_pixel[3:0];
+				
 			end
 			// we're outside active vertical range so display black
 			else
