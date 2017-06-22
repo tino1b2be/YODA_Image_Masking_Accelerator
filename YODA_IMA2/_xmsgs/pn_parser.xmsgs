@@ -8,5 +8,8 @@
 <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.    -->
 
 <messages>
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/rbcsj/Desktop/Yoda_git/YODA_Image_Masking_Accelerator/YODA_IMA2/image_12_bit_rom.v&quot; into library work</arg>
+</msg>
+
 </messages>
 

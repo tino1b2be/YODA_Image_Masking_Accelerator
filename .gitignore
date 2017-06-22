@@ -17,3 +17,4 @@ YODA_IMA2/xst/*
 *.exe
 
 *.gise
+*.xmsgs
