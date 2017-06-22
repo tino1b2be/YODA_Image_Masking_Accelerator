@@ -48,6 +48,9 @@
     <transform xil_pn:end_ts="1498138872" xil_pn:in_ck="-1425532692801855715" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1498138872">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="InputAdded"/>
+      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="image_12_bit_rom.v"/>
       <outfile xil_pn:name="image_rom_tb.v"/>
       <outfile xil_pn:name="imm.v"/>
@@ -72,6 +75,7 @@
     <transform xil_pn:end_ts="1498138873" xil_pn:in_ck="-1425532692801855715" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1498138872">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="image_12_bit_rom.v"/>
       <outfile xil_pn:name="image_rom_tb.v"/>
       <outfile xil_pn:name="imm.v"/>
@@ -84,7 +88,13 @@
     <transform xil_pn:end_ts="1498138913" xil_pn:in_ck="-1425532692801855715" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="4073246134550739929" xil_pn:start_ts="1498138873">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+<<<<<<< HEAD
       <status xil_pn:value="OutOfDateForProperties"/>
+=======
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+>>>>>>> ee02c47f15dabbfd517a5a2cc82b201a0c19dc9a
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="fuse.log"/>
@@ -101,6 +111,10 @@
       <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
+<<<<<<< HEAD
+=======
+      <outfile xil_pn:name="imm_tb_isim_beh.wdb"/>
+>>>>>>> ee02c47f15dabbfd517a5a2cc82b201a0c19dc9a
       <outfile xil_pn:name="isim.cmd"/>
       <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="mask_rom_tb_isim_beh.wdb"/>

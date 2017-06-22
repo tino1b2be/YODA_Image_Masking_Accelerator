@@ -8,7 +8,11 @@
 <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.    -->
 
 <messages>
+<<<<<<< HEAD
 <msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/rbcsj/Desktop/Yoda_git/YODA_Image_Masking_Accelerator/YODA_IMA2/transfer_interface_tb.v&quot; into library work</arg>
+=======
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/tino1b2be/Documents/YODA_Image_Masking_Accelerator/YODA_IMA2/vga_buffer_ram_tb.v&quot; into library work</arg>
+>>>>>>> ee02c47f15dabbfd517a5a2cc82b201a0c19dc9a
 </msg>
 
 </messages>
