@@ -33,10 +33,10 @@
   </files>
 
   <transforms xmlns="http://www.xilinx.com/XMLSchema">
-    <transform xil_pn:end_ts="1498095024" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1498095023">
+    <transform xil_pn:end_ts="1498134613" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1498134607">
       <status xil_pn:value="SuccessfullyRun"/>
     </transform>
-    <transform xil_pn:end_ts="1498096286" xil_pn:in_ck="-8413435488800780188" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1498096286">
+    <transform xil_pn:end_ts="1498134614" xil_pn:in_ck="-8413435488800780188" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1498134613">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="image_12_bit_rom.v"/>
@@ -47,19 +47,19 @@
       <outfile xil_pn:name="mask_rom_tb.v"/>
       <outfile xil_pn:name="utils.v"/>
     </transform>
-    <transform xil_pn:end_ts="1498095024" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-372508997977178481" xil_pn:start_ts="1498095024">
+    <transform xil_pn:end_ts="1498134614" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-372508997977178481" xil_pn:start_ts="1498134614">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1498095024" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-7424691824673827027" xil_pn:start_ts="1498095024">
+    <transform xil_pn:end_ts="1498134614" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-7424691824673827027" xil_pn:start_ts="1498134614">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1498096286" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="1738137239507178976" xil_pn:start_ts="1498096286">
+    <transform xil_pn:end_ts="1498134614" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="1738137239507178976" xil_pn:start_ts="1498134614">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1498096286" xil_pn:in_ck="-8413435488800780188" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1498096286">
+    <transform xil_pn:end_ts="1498134614" xil_pn:in_ck="-8413435488800780188" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1498134614">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="image_12_bit_rom.v"/>
@@ -70,9 +70,11 @@
       <outfile xil_pn:name="mask_rom_tb.v"/>
       <outfile xil_pn:name="utils.v"/>
     </transform>
-    <transform xil_pn:end_ts="1498096332" xil_pn:in_ck="-8413435488800780188" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="7330070314539401453" xil_pn:start_ts="1498096286">
+    <transform xil_pn:end_ts="1498134663" xil_pn:in_ck="-8413435488800780188" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="7330070314539401453" xil_pn:start_ts="1498134614">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="fuse.log"/>
       <outfile xil_pn:name="imm_tb_beh.prj"/>
       <outfile xil_pn:name="imm_tb_isim_beh.exe"/>
@@ -80,7 +82,7 @@
       <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1498096332" xil_pn:in_ck="-2922017720272247609" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-2132849653422032336" xil_pn:start_ts="1498096332">
+    <transform xil_pn:end_ts="1498134664" xil_pn:in_ck="-2922017720272247609" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-2132849653422032336" xil_pn:start_ts="1498134663">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="imm_tb_isim_beh.wdb"/>

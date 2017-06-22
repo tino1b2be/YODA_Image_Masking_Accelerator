@@ -22,8 +22,8 @@
 #define alloca _alloca
 #endif
 static const char *ng0 = "/home/tino1b2be/Documents/YODA_Image_Masking_Accelerator/YODA_IMA2/imm.v";
-static int ng1[] = {320, 0};
-static int ng2[] = {240, 0};
+static int ng1[] = {177, 0};
+static int ng2[] = {110, 0};
 
 static void NetReassign_56_2(char *);
 static void NetReassign_57_3(char *);

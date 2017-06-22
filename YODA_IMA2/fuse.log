@@ -1,4 +1,4 @@
-Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -relaunch -intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "/home/tino1b2be/Documents/YODA_Image_Masking_Accelerator/YODA_IMA2/imm_tb_isim_beh.exe" -prj "/home/tino1b2be/Documents/YODA_Image_Masking_Accelerator/YODA_IMA2/imm_tb_beh.prj" "work.imm_tb" "work.glbl" 
+Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o /home/tino1b2be/Documents/YODA_Image_Masking_Accelerator/YODA_IMA2/imm_tb_isim_beh.exe -prj /home/tino1b2be/Documents/YODA_Image_Masking_Accelerator/YODA_IMA2/imm_tb_beh.prj work.imm_tb work.glbl 
 ISim P.20131013 (signature 0xfbc00daa)
 Number of CPUs detected in this system: 2
 Turning on mult-threading, number of parallel sub-compilation jobs: 4 
@@ -9,8 +9,8 @@ Analyzing Verilog file "/home/tino1b2be/Documents/YODA_Image_Masking_Accelerator
 Analyzing Verilog file "/opt/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
 Starting static elaboration
 Completed static elaboration
-Fuse Memory Usage: 108560 KB
-Fuse CPU Usage: 1800 ms
+Fuse Memory Usage: 108564 KB
+Fuse CPU Usage: 1930 ms
 Compiling module mask_rom
 Compiling module imm
 Compiling module imm_tb
@@ -19,6 +19,6 @@ Time Resolution for simulation is 1ps.
 Waiting for 1 sub-compilation(s) to finish...
 Compiled 4 Verilog Units
 Built simulation executable /home/tino1b2be/Documents/YODA_Image_Masking_Accelerator/YODA_IMA2/imm_tb_isim_beh.exe
-Fuse Memory Usage: 464096 KB
-Fuse CPU Usage: 23690 ms
-GCC CPU Usage: 260 ms
+Fuse Memory Usage: 464124 KB
+Fuse CPU Usage: 23650 ms
+GCC CPU Usage: 18990 ms

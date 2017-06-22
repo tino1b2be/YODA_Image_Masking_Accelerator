@@ -1,3 +1,18 @@
 muninja/isim/*
+muninja/isim/*
+muninja/iseconfig/*
+muninja/_xmsgs/*
+muninja/xst/*
+
+YODA_IMA2/isim/*
+YODA_IMA2/iseconfig/*
+YODA_IMA2/_xmsgs/*
+YODA_IMA2/xst/*
+
+*.log
 *.wdb
+*.xml
+*.html
+*.wdb
+*.exe
 
