@@ -53,8 +53,8 @@ module imm
 	 mask_col 		= (pixel_col_reg - mask_col_offset_reg);
 	 
 	 // set the output lines for the 
-	 assign pixel_row_out = pixel_row_reg;
-	 assign pixel_col_out = pixel_col_reg;
+	 pixel_row_out = pixel_row_reg;
+	 pixel_col_out = pixel_col_reg;
 	 
     if (pixel_row_reg >= mask_row_offset_reg
         && pixel_row_reg < (mask_row_offset_reg + `MASK_WIDTH)			

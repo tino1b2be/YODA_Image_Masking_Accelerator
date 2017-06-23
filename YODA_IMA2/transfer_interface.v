@@ -26,12 +26,6 @@ reg [8:0] pix_col_reg;
 	
 	always @(posedge Clock) begin
 		col_count = col_count + 1;
-	end
-	
-	always @(*) begin
-		pixel_out = pixel_in_reg;
-		pix_row = row_count;
-		pix_col = col_count;
 		if(col_count > `IMAGE_WIDTH) // TODO Replace with actual column width
 		begin
 			col_count = 0;
@@ -41,5 +35,12 @@ reg [8:0] pix_col_reg;
 				row_count = 0;
 			end
 		end
+	end
+	
+	always @(*) begin
+		pixel_out = pixel_in_reg;
+		pix_row = row_count;
+		pix_col = col_count;
+		
 	end
 endmodule
