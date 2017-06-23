@@ -1,27 +1,5 @@
 `timescale 1ns / 1ps
 
-////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer:
-//
-// Create Date:   02:53:34 06/23/2017
-// Design Name:   driver
-// Module Name:   /home/bluelabuser/Desktop/John/YODA_Image_Masking_Accelerator/YODA_IMA2/driver_tb.v
-// Project Name:  YODA_IMA2
-// Target Device:  
-// Tool versions:  
-// Description: 
-//
-// Verilog Test Fixture created by ISE for module: driver
-//
-// Dependencies:
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-////////////////////////////////////////////////////////////////////////////////
-
 module driver_tb;
 
 	// Inputs
@@ -49,55 +27,58 @@ module driver_tb;
 		clk = 0;
 
 		// Wait 100 ns for global reset to finish
-		#100;
-		#50 clk = 1;
-		#50 clk = 0;
-		#50 clk = 1;
-		#50 clk = 0;
-		#50 clk = 1;
-		#50 clk = 0;
-		#50 clk = 1;
-		#50 clk = 0;
-		#50 clk = 1;
-		#50 clk = 0;
-		#50 clk = 1;
-		#50 clk = 0;
-		#50 clk = 1;
-		#50 clk = 0;
-		#50 clk = 1;
-		#50 clk = 0;
-		#50 clk = 1;
-		#50 clk = 0;
-		#50 clk = 1;
-		#50 clk = 0;
-		#50 clk = 1;
-		#50 clk = 0;
-		#50 clk = 1;
-		#50 clk = 0;
-		#50 clk = 1;
-		#50 clk = 0;
-		#50 clk = 1;
-		#50 clk = 0;
-		#50 clk = 1;
-		#50 clk = 0;
-		#50 clk = 1;
-		#50 clk = 0;
-		#50 clk = 1;
-		#50 clk = 0;
-		#50 clk = 1;
-		#50 clk = 0;
-		#50 clk = 1;
-		#50 clk = 0;
-		#50 clk = 1;
-		#50 clk = 0;
-		#50 clk = 1;
-		#50 clk = 0;
-		#50 clk = 1;
-		#50 clk = 0;
-		#50 clk = 1;
-		#50 clk = 0;
-        
-		// Add stimulus here
+		#100 clk = 1;
+		#10 clk = 0;
+		#10 clk = 1;
+		#10 clk = 0;
+		#10 clk = 1;
+		#10 clk = 0;
+		#10 clk = 1;
+		#10 clk = 0;
+		#10 clk = 1;
+		#10 clk = 0;
+		#10 clk = 1;
+		#10 clk = 0;
+		#10 clk = 1;
+		#10 clk = 0;
+		#10 clk = 1;
+		#10 clk = 0;
+		#10 clk = 1;
+		#10 clk = 0;
+		#10 clk = 1;
+		#10 clk = 0;
+		#10 clk = 1;
+		#10 clk = 0;
+		#10 clk = 1;
+		#10 clk = 0;
+		#10 clk = 1;
+		#10 clk = 0;
+		#10 clk = 1;
+		#10 clk = 0;
+		#10 clk = 1;
+		#10 clk = 0;
+		#10 clk = 1;
+		#10 clk = 0;
+		#10 clk = 1;
+		#10 clk = 0;
+		#10 clk = 1;
+		#10 clk = 0;
+		#10 clk = 1;
+		#10 clk = 0;
+		#10 clk = 1;
+		#10 clk = 0;
+		#10 clk = 1;
+		#10 clk = 0;
+		#10 clk = 1;
+		#10 clk = 0;
+		#10 clk = 1;
+		#10 clk = 0;
+		#10 clk = 1;
+		#10 clk = 0;
+		#10 clk = 1;
+		#10 clk = 0;
+		#10 clk = 1;
+      		#10 $finish;
 
 	end
       

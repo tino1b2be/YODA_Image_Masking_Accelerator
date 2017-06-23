@@ -12,29 +12,16 @@ module vga_buffer_ram(
     );
 	
 	// RAM array for the VGA bugger
-	reg [11:0] vga_buffer[`IMAGE_WIDTH * `IMAGE_HEIGHT : 0];
+	reg [11:0] vga_buffer[(`IMAGE_WIDTH * `IMAGE_HEIGHT)-1 : 0];
+	wire [8:0] width;
+	assign width = 9'h_140;
 	
-	// create local registers to be used 
-	//reg [11:0]	pixel_result_reg;
-   //reg [7:0]	pixel_row_reg;
-   //reg [8:0]	pixel_col_reg;
-
-   //reg [7:0]	row_read_reg;
-   //reg [8:0]	col_read_reg;
-
-	//always@() begin
-	//	pixel_result_reg 	= pixel_result;
-	//	pixel_row_reg		= pixel_row;
-	//	pixel_col_reg		= pixel_col;
-	//	row_read_reg		= row_read;
-	//	col_read_reg		= col_read;
-	//end
 	
 	always@(*) begin
 		// write the pixel input to the RAM
-		vga_buffer[pixel_row * pixel_col] = pixel_result;
+		vga_buffer[(pixel_row * width) + pixel_col] = pixel_result;
 		// Read the pixel onto the output foe the VGA Controller to read.
-		pixel_out = vga_buffer[row_read * col_read];
+		pixel_out = vga_buffer[(row_read * width) + col_read];
 	end
 
 endmodule
