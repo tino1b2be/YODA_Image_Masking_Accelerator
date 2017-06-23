@@ -6,24 +6,24 @@ module imm
 	// ------ inputs --------
     input 					clk,
     input	[11:0]		image_pixel,
-    input	[8:0]			pixel_row,
-    input	[7:0]			pixel_col,
-    input	[8:0]			mask_row_offset,
-    input	[7:0]			mask_col_offset,
+    input	[7:0]			pixel_row,
+    input	[8:0]			pixel_col,
+    input	[7:0]			mask_row_offset,
+    input	[8:0]			mask_col_offset,
 	
 	// ------ outputs --------	
-	 output reg	[8:0]		pixel_row_out,
-	 output reg	[7:0]		pixel_col_out,
+	 output reg	[7:0]		pixel_row_out,
+	 output reg	[8:0]		pixel_col_out,
     output reg	[11:0]	pixel_result
 	);
 
   // ----------- registers to store the iputs and connect the output wires.
   
     reg  [11:0]	image_pixel_reg;
-    reg  [8:0]		pixel_row_reg;
-    reg  [7:0]		pixel_col_reg;
-    reg  [8:0]		mask_row_offset_reg;
-    reg  [7:0]		mask_col_offset_reg;
+    reg  [7:0]		pixel_row_reg;
+    reg  [8:0]		pixel_col_reg;
+    reg  [7:0]		mask_row_offset_reg;
+    reg  [8:0]		mask_col_offset_reg;
 	 reg  [6:0]		mask_row;
 	 reg  [7:0]		mask_col;
 	 wire [11:0]	mask_pixel_reg;
