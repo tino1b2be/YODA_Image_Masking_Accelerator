@@ -10,9 +10,9 @@ module vga_controller
 	output	vga_hs,
 	output	hFree,
 	output	vFree,	
-	output reg	[3:0]		vga_r,
-	output reg	[3:0]		vga_g,
-	output reg	[3:0]		vga_b,
+	output [3:0]		vga_r,
+	output [3:0]		vga_g,
+	output [3:0]		vga_b,
 	output reg	[7:0] 	row_read,
 	output reg 	[8:0] 	col_read
 	);
@@ -35,30 +35,29 @@ module vga_controller
 	// wires to access pixels on the screen
 	wire [9:0] hc,vc;
 	
+	assign vga_r = ram_pixel[11:8];
+	assign vga_g = ram_pixel[7:4];
+	assign vga_b = ram_pixel[3:0];
+	
 	always@(*)begin
 		
 		// first check if we are inside the 320x240 area for the image
 			if (vc >= vbp
-				&& vc < (vfp + `IMAGE_HEIGHT)
+				&& vc < (vbp + `IMAGE_HEIGHT)
 				&& hc >= hbp
-				&& hc < (hfp + `IMAGE_WIDTH)
+				&& hc < (hbp + `IMAGE_WIDTH)
 				) begin
 			
 				// set the row and column addresses for the VGA_RAM_BUFFER
 				row_read = vc - vbp;
 				col_read = hc - hbp;
 				
-				vga_r = ram_pixel[11:8];
-				vga_g = ram_pixel[7:4];
-				vga_b = ram_pixel[3:0];
-				
 			end
 			// we're outside active vertical range so display black
 			else
 			begin
-				vga_r = 0;
-				vga_g = 0;
-				vga_b = 0;
+				row_read = 0;
+				col_read = 0;
 			end
 		end
 			
