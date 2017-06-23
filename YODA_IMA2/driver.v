@@ -1,35 +1,30 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date:    21:42:06 06/22/2017 
-// Design Name: 
-// Module Name:    driver 
-// Project Name: 
-// Target Devices: 
-// Tool versions: 
-// Description: 
-//
-// Dependencies: 
-//
-// Revision: 
-// Revision 0.01 - File Created
-// Additional Comments: 
-//
-//////////////////////////////////////////////////////////////////////////////////
+
+
 module driver(
-	input Clock
+	input wire clk, // 100Mhz
+	output wire	vga_vs,
+	output wire	vga_hs,
+//	output wire	hFree,
+//	output wire	vFree,	
+	output wire	[3:0]		vga_r,
+	output wire	[3:0]		vga_g,
+	output wire	[3:0]		vga_b
     );
 
+	wire	hFree;
+	wire	vFree;
+	
+	//wire clk_50;
+
 // Inputs
-	reg Clock;
+	//reg Clock;
 	reg [7:0] mask_row_offset;
 	reg [8:0] mask_col_offset;
 	
 	// address values from the VGA controller
-	reg [7:0] row_read;
-	reg [8:0] col_read;
+	wire [7:0] row_read;
+	wire [8:0] col_read;
 	
 	// Outputs
 	wire [11:0] transfer_pixel_out;
@@ -40,9 +35,16 @@ module driver(
 	wire [11:0] mask_pixel_result;
 	wire [11:0] ram_pixel_out;
 
+// create a 50mhz clock
+	clockDiv clock_50(
+		.clk(clk),
+		.div(32'd_10),
+		.out(clk_x)
+	);
+
 	// Instantiate the Unit Under Test (UUT)
 	transfer_interface uut (
-		.Clock(Clock), 
+		.Clock(clk_x), 
 		.pixel_out(transfer_pixel_out), 
 		.pix_row(transfer_pixel_row_out), 
 		.pix_col(transfer_pixel_col_out)
@@ -50,7 +52,7 @@ module driver(
 	
 	// Instantiate the Unit Under Test (UUT)
 	imm masker (
-		.clk(Clock), 
+		.clk(clk_x), 
 		.image_pixel(transfer_pixel_out), 
 		.pixel_row(transfer_pixel_row_out), 
 		.pixel_col(transfer_pixel_col_out), 
@@ -72,5 +74,18 @@ module driver(
 		.pixel_out(ram_pixel_out)
 	);
 
+	vga_controller vga_controller(
+		.clk(clk),
+		.ram_pixel(ram_pixel_out),
+		.vga_vs(vga_vs),
+		.vga_hs(vga_hs),
+		.hFree(hFree),
+		.vFree(vFree),	
+		.vga_r(vga_r),
+		.vga_g(vga_g),
+		.vga_b(vga_b),
+		.row_read(row_read),
+		.col_read(col_read)
+	);
 
 endmodule
