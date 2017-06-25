@@ -5,37 +5,28 @@ module imm
 	
 	// ------ inputs --------
     input 					clk,
-    input	[11:0]		image_pixel,
-    input	[7:0]			pixel_row,
-    input	[8:0]			pixel_col,
+    input	[11:0]		image_pixel, mask_pixel, 	// image pixel from the transfer module and mask pixel from the mask_brom
+    input	[7:0]			pixel_row,						// pixel row address
+    input	[8:0]			pixel_col,						// pixel col address
     input	[7:0]			mask_row_offset,
     input	[8:0]			mask_col_offset,
 	
 	// ------ outputs --------	
-	 output reg	[7:0]		pixel_row_out,
+	
+	 output reg	[7:0]		pixel_row_out,					// pixel address to vga_ram
 	 output reg	[8:0]		pixel_col_out,
-    output reg	[11:0]	pixel_result
+	 output reg [6:0]		mask_row,						// mask pixel address to the mask_brom
+	 output reg [7:0]		mask_col,
+    output reg	[11:0]	pixel_result					// the result of the masking process (if masked)
 	);
 
-  // ----------- registers to store the iputs and connect the output wires.
-  
+  // ----------- registers to store the iputs and connect the outputs.
     reg  [11:0]	image_pixel_reg;
     reg  [7:0]		pixel_row_reg;
     reg  [8:0]		pixel_col_reg;
     reg  [7:0]		mask_row_offset_reg;
     reg  [8:0]		mask_col_offset_reg;
-	 reg  [6:0]		mask_row;
-	 reg  [7:0]		mask_col;
-	 wire [11:0]	mask_pixel_reg;
 	 
-	 // instantiate the BROM that stores the mask.
-	 
-	 mask_rom mask(
-	   .row(mask_row),					// mask row address line
-		.col(mask_col),					// mask col address line
-		.color_data(mask_pixel_reg)	// mask pixel output bus
-	 );
-  
   // update registeres when clocked
   always @(posedge clk) begin
 		image_pixel_reg		<= image_pixel;
@@ -52,10 +43,11 @@ module imm
 	 mask_row 		= (pixel_row_reg - mask_row_offset_reg);
 	 mask_col 		= (pixel_col_reg - mask_col_offset_reg);
 	 
-	 // set the output lines for the 
+	 // set the output address lines to be read by the vga_buffer
 	 pixel_row_out = pixel_row_reg;
 	 pixel_col_out = pixel_col_reg;
 	 
+	 // check if the pixel is within the masking area.
     if (pixel_row_reg >= mask_row_offset_reg
         && pixel_row_reg < (mask_row_offset_reg + `MASK_WIDTH)			
         && pixel_col_reg >= mask_col_offset_reg
@@ -63,7 +55,7 @@ module imm
        ) begin	
       
 		// TODO need a delay to get the mask pixel from BROM
-      pixel_result = image_pixel_reg ^ mask_pixel_reg;
+      pixel_result = image_pixel_reg ^ mask_pixel;
     
     end // end if inside mask
 	 
@@ -76,4 +68,4 @@ module imm
     
   end // end of always block
   
-endmodule
+endmodule // imm

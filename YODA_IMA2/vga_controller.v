@@ -3,18 +3,16 @@
 
 module vga_controller
 	(
-	input	clk,
+	input						clk,
 	input			[11:0]	ram_pixel,
 
-	output	vga_vs,
-	output	vga_hs,
-	output	hFree,
-	output	vFree,	
-	output [3:0]		vga_r,
-	output [3:0]		vga_g,
-	output [3:0]		vga_b,
+	output					vga_vs,
+	output					vga_hs,
+	output 		[3:0]		vga_r,
+	output 		[3:0]		vga_g,
+	output 		[3:0]		vga_b,
 	output reg	[7:0] 	row_read,
-	output reg 	[8:0] 	col_read
+	output reg 	[8:0] 	col_read	
 	);
 	
 	// video structure constants
@@ -34,10 +32,12 @@ module vga_controller
 	
 	// wires to access pixels on the screen
 	wire [9:0] hc,vc;
+	wire	hFree;	// not used anymore
+	wire	vFree;	// not used anymore
 	
-	assign vga_r = ram_pixel[11:8];
+	assign vga_r = ram_pixel[11:8];	// red starts at the MSB
 	assign vga_g = ram_pixel[7:4];
-	assign vga_b = ram_pixel[3:0];
+	assign vga_b = ram_pixel[3:0];	// blue is at the LSB side
 	
 	always@(*)begin
 		

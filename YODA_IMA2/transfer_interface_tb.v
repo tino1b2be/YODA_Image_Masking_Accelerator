@@ -1,27 +1,6 @@
 `timescale 1ns / 1ps
 
-////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer:
-//
-// Create Date:   18:56:44 06/22/2017
-// Design Name:   transfer_interface
-// Module Name:   /home/bluelabuser/Desktop/John/YODA_Image_Masking_Accelerator/YODA_IMA2/transfer_interface_tb.v
-// Project Name:  YODA_IMA2
-// Target Device:  
-// Tool versions:  
-// Description: 
-//
-// Verilog Test Fixture created by ISE for module: transfer_interface
-//
-// Dependencies:
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-////////////////////////////////////////////////////////////////////////////////
-
+// test bench for the transfer interface module
 module transfer_interface_tb;
 
 	// Inputs
@@ -29,26 +8,34 @@ module transfer_interface_tb;
 
 	// Outputs
 	wire [11:0] pixel_out;
+	wire [11:0] rom_pixel;
+	wire [7:0] rom_pix_row;
+	wire [8:0] rom_pix_col;
 	wire [7:0] pix_row;
 	wire [8:0] pix_col;
+
+	image_rom image(
+		.row(rom_pix_row),
+		.col(rom_pix_col),
+		.color_data(rom_pixel)
+	);
 
 	// Instantiate the Unit Under Test (UUT)
 	transfer_interface uut (
 		.Clock(Clock), 
+		.rom_pixel(rom_pixel),
 		.pixel_out(pixel_out), 
 		.pix_row(pix_row), 
-		.pix_col(pix_col)
+		.pix_col(pix_col),
+		.rom_pix_row(rom_pix_row), 
+		.rom_pix_col(rom_pix_col)
 	);
 
 	initial begin
 		$monitor("clock = %d, pixel out = %d, row = %d, column = %d", Clock, pixel_out, pix_row, pix_col);
-		// Initialize Inputs
+		
+		// the output should be a different pixel (most of the time) at each clock pulse.
 		Clock = 0;
-
-		// Wait 100 ns for global reset to finish
-		#100;
-            
-		// Add stimulus here
 		
 		#20 Clock = 1;
 		
@@ -98,7 +85,7 @@ module transfer_interface_tb;
 		
 		#20 Clock = 0;
 		
-		#100 $finish;
+		#20 $finish;
 	end
-      
+ 
 endmodule
