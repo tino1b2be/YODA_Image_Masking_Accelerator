@@ -1,0 +1,2 @@
+Run the python files to generate a B_ROM Verilog module that is either synchronous or asynchrous
+Change the filename of the image to be converted inside the pythong files.

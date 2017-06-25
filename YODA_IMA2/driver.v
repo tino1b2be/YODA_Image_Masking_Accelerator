@@ -1,6 +1,6 @@
 `timescale 1ns / 1ps
 
-
+// top module for the IMA
 module driver(
 	input wire 			clk, 		// 100Mhz
 	output wire			vga_vs,	// vertical sync signal

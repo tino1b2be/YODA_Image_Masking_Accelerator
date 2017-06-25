@@ -1,0 +1,26 @@
+Program can:
+
+"-x I1 I2"	(XOR mask I1 with I2)
+"-a I1 I2" 	(add I1 and I2)
+"-s I1 I2" 	(subtract I2 from I1)
+"-i I1"		(invert I1)
+"-l I1 I2" 	(mask I1 with I2)
+"-t I1 f" 	(threshold I1 with integer value f)
+
+To run the program, run make inside the home directory ".../IMM/"
+and run the executable file "imageops" with the relevant arguments, for example: for and XOR masking operation use "-x"
+`./imageops -x files/shrek_rectangular.pgm files/donkey_mask.pgm output`
+will run a masking operation.
+
+Unit testing
+The folder /unittesting includes a makefile to compile the unit tests. run ./tests with the necessary 
+cath.hpp arguments after compiling. There are a total of 4 test cases but these test cases cover tests
+for all aspects of the program (described inside the source code) which include copy and move constructors, 
+all image iterator operations and the qualitative test described in the assignment.
+
+Files
+/Makefile - makefile for the imageops program
+/src/main.cpp - Driver class for the program
+/src/image.cpp/image.h - class for the image container together with the nested iterator class
+/unittesting/Makefile - makefile for the unit testing
+/unittesting/Tests.cpp - program to run unit tests on the imageops program
